@@ -3,63 +3,72 @@ $light-grey: #eaeaeb;
 $dark-grey: #464646;
 .header{
 
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  font-family: Arial, Helvetica, sans-serif;
+    
+    &__logo{
+      
+      text-align: center;
+    }
+
+    &__img{
   
-  .header__logo{
+      max-width: 350px;
+    }
+
+    .menu{
+
+      &__list{
+        display: flex;
+        justify-content: center;
+        border-top: 1px solid $light-grey;
+        border-bottom: 1px solid $light-grey;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        padding: 20px 0;
+        margin-top: 30px  ;
+
+      }
+
+      &__links{
+
+        position: relative;
+
+        &:not(:last-chield)::after{
   
-    text-align: center;
-  }
-  
-  .header__logo .header__img{
-  
-    max-width: 350px;
-  }
-  
-  .header__menu .menu__list{
-    display: flex;
-    justify-content: center;
-    border-top: 1px solid #eaeaeb;
-    border-bottom: 1px solid #eaeaeb;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    padding: 20px 0;
-    margin-top: 30px  ;
-  }
-  
-  .header__menu .menu_list .menu__links{
-  
-    position: relative;
-  }
-  
-  .header__menu .menu__list .menu__links:not(:last-chield)::after{
-  
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: -3 px;
-    margin: auto;
-    height: 15px;
-    width: 1px;
-    background-color: $light-grey
-  }
-  
-  
-  .header__menu .menu__list .menu__links .menu__link{
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: -3 px;
+          margin: auto;
+          height: 15px;
+          width: 1px;
+          background-color: $light-grey
+        
+        
+        }
+
+      }
+      &__link{
   
         padding:25px;
         color: $dark-grey;
         text-decoration: none;
         text-transform: uppercase;
+        &:hover{
+  
+          color: $red;
+        }
+      
+      }
+      
+    }
+
   }
+
   
-  .header__menu .menu__list .menu__links .menu__link:hover{
-  
-    color: $red;
-  }
-  
+
   .footer{
     text-align: center;
     padding: 20px 0;
@@ -69,19 +78,21 @@ $dark-grey: #464646;
     transform: translateX(-50%);
     position: absolute;
   
-  }
+
+    &__logo{
   
-  .footer .footer__logo{
-  
-    max-width: 100px;
-  }
-  
-  .footer .footer__text{
-    margin: auto;
-    font-size: 14px;
+      max-width: 100px;
+    }
+      &__text{
+      margin: auto;
+      font-size: 14px;
+    }
   }
 
   
+ 
   
-  
+
+
+
   
