@@ -53,6 +53,137 @@
   color: red;
 }
 
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main__content {
+  width: 70%;
+  padding: 40px;
+}
+
+.main__post {
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main__title {
+  text-decoration: none;
+  font-size: 22px;
+  color: #464646;
+  letter-spacing: 1.5;
+}
+
+.main__title:hover {
+  color: red;
+}
+
+.main_subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.main__date {
+  margin: 0 10px;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.main__tag {
+  font-size: 14px;
+  padding: 5px 7px;
+  color: red;
+  border: 1px solid red;
+  margin: 0 10px;
+}
+
+.main__details {
+  border: 1px solid #eaeaeb;
+}
+
+.main__img {
+  width: 40%;
+}
+
+.main__description {
+  padding: 50px 40px 20px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+}
+
+.main__btn {
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 1.5;
+  color: white;
+  background-color: red;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+
+.main__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #eaeaeb;
+  margin-top: 30px;
+}
+
+.main__author {
+  width: 50%;
+  border-right: 1px solid #eaeaeb;
+}
+
+.main__p {
+  font-size: 14px;
+  color: #464646;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.main__comments {
+  width: 50%;
+}
+
+.main__a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #464646;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.main__a:hover {
+  color: red;
+}
+
 .footer {
   text-align: center;
   padding: 20px 0;
@@ -61,7 +192,7 @@
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  position: absolute;
+  position: relative;
 }
 
 .footer__logo {
