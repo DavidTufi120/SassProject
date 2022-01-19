@@ -17,16 +17,6 @@ $blue: blue;
 $direction: top, bottom, left, right;
 $layout-margin-size: 10px;
 
-@each $direction in $directions{
-
-  %no-margin-#{$direction} {margin-#{$direction}:0;}
-  %default-margin-#{$direction}{margin-#{$direction}:$layout-margin-size;}
-  %double-margin-#{direction}{margin-#{$direction}:$layout-margin-size*2;}
-  %half-margin-#{direction}{margin-#{$direction}:$layout-margin-size/2;}
-
-  
-}
-
 .header{
 
   font-family: Arial, Helvetica, sans-serif;
@@ -95,6 +85,37 @@ $layout-margin-size: 10px;
 
 }
 
+.contact{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+
+  &__figure{
+
+    width: 400px;
+  }
+
+  &__img{
+
+    width: 400px;
+  }
+
+  &__info{
+    width: 40%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;     
+   
+   
+  }
+
+  
+}
+
 .main {
   display: flex;
   justify-content: center;
@@ -134,12 +155,13 @@ $layout-margin-size: 10px;
      display: flex;
      justify-content: center;
      align-items: center;
-     @extend %default-margin-top, %double-margin-bottom;
+     margin-top: 10px;
+     margin-bottom: 20px;
    }
 
    
   &__date{
-    @extend %no-margin-top, %no-margin-bottom,%default-margin-left,%default-margin-right;
+    margin: 0 10px;
     font-size: 12px;
     font-style: italic;
 
