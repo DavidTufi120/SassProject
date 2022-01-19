@@ -3,6 +3,17 @@ $light-grey: #eaeaeb;
 $dark-grey: #464646;
 $blue: blue;
 
+%no-decoration{text-decoration: none;}
+%u-decoration{text-decoration: underline;}
+
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: 0;
+  
+}
+
 .header{
 
   font-family: Arial, Helvetica, sans-serif;
@@ -61,6 +72,7 @@ $blue: blue;
       &:hover{
 
         color: $red;
+        
       }
     
     }
@@ -93,11 +105,12 @@ $blue: blue;
      text-decoration: none;
      font-size: 22px;
      color : $dark-grey;
-     letter-spacing: 1.5;
+     letter-spacing: 1.5px;
 
      &:hover{
 
       color: $red;
+      
      }
 
     
@@ -153,7 +166,7 @@ $blue: blue;
 
     text-decoration: none;
     font-size: 16px;
-    letter-spacing: 1.5;
+    letter-spacing: 1.5px;
     color: white;
     background-color: $red;
     padding: 10px 20px;
@@ -201,6 +214,87 @@ $blue: blue;
 
     }
   }
+  &__sidebar{
+    width: min-content;
+    padding: 10px 10px;
+    margin-right: 60px;
+  }
+  
+  .sidebar{
+
+    &__top{
+      border: 1px solid $light-grey;
+      padding: 15px 20px;
+     
+      
+    }
+    &__title{
+      background-color: yellow;
+      text-align: center;
+      padding:10px 20px;
+      margin: 0;
+      letter-spacing: 1.5px;
+
+    }
+    &__posts{
+      margin : 0;
+      padding: 0;
+      list-style:none;
+
+
+    }
+
+    &__list{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 15px 0;
+      &:not(:last-child){
+        border-bottom: 1 px dashed $light-grey;
+      }
+
+    }
+
+      &__img{
+
+        width: 200px;
+      }
+
+      &__details{
+        width: 90%;
+        padding-left: 10px;
+        text-align: center;
+        
+
+      }
+
+      &__post-title{
+
+        font-size: 14px;
+        color: $red;
+      
+        @extend %no-decoration;
+        &:hover{
+
+          @extend %u-decoration;
+
+        }
+        
+      }
+
+      &__post-date{
+        font-size: 12px;
+        margin: 5px 0 0 0;
+
+      }
+    
+    
+    
+
+  }
+ 
+  
 }
 
 
@@ -225,6 +319,101 @@ $blue: blue;
   }
 
   
+}
+
+.about{
+
+  width: 80%;
+  margin: 0 auto 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  
+  
+
+  &__title{
+    background-color: $light-grey;
+    text-align: center;
+    padding: 20px;
+
+  }
+
+  &__h1{
+    font-size: 22px;
+    color: $dark-grey;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+
+  }
+
+  .breadcrumb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__link{
+      font-size: 12px;
+      text-decoration: none;
+      color:$dark-grey;
+
+        &:hover{
+          text-decoration: underline;
+          color: $red;
+        }
+    }
+    &__img{
+
+    width: 70px;
+    margin: 8px;
+    }
+
+
+   }
+  &__img{
+
+    width: 50%;
+    margin-bottom: 20px;
+    
+  }
+
+  &__intro{
+    font-weight: 100;
+    color: $dark-grey;
+    width: 50%;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 20px;
+    text-shadow: black 3px 2px 3px;
+   
+
+  }
+
+  &__split{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+
+
+  }
+
+  &__img2{
+
+    width: 40%
+  }&__txt{
+
+    margin: 40px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    width: calc(100% - 45%);
+    white-space: pre-line;
+    text-align: left;
+  }
+
+  
+   
 }
 
 
