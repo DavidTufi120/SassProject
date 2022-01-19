@@ -6,11 +6,24 @@ $blue: blue;
 %no-decoration{text-decoration: none;}
 %u-decoration{text-decoration: underline;}
 
-
 @mixin reset-list {
   margin: 0;
   padding: 0;
   list-style: 0;
+  
+}
+
+
+$direction: top, bottom, left, right;
+$layout-margin-size: 10px;
+
+@each $direction in $directions{
+
+  %no-margin-#{$direction} {margin-#{$direction}:0;}
+  %default-margin-#{$direction}{margin-#{$direction}:$layout-margin-size;}
+  %double-margin-#{direction}{margin-#{$direction}:$layout-margin-size*2;}
+  %half-margin-#{direction}{margin-#{$direction}:$layout-margin-size/2;}
+
   
 }
 
@@ -121,13 +134,12 @@ $blue: blue;
      display: flex;
      justify-content: center;
      align-items: center;
-     margin-top: 10px;
-     margin-bottom: 20px;
+     @extend %default-margin-top, %double-margin-bottom;
    }
 
    
   &__date{
-    margin: 0 10px;
+    @extend %no-margin-top, %no-margin-bottom,%default-margin-left,%default-margin-right;
     font-size: 12px;
     font-style: italic;
 
